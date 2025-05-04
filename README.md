@@ -60,7 +60,7 @@ Jay
 
 ## License
 
-MIT License
+
 
 Copyright (c) 2025 Jayasurya and Aditya Joshi
 
