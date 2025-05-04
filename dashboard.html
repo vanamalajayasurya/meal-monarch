@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Dashboard - Smart Diet Planner</title>
+    <link rel="stylesheet" href="dashbord.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="dashboard.js"></script>
+    
+</head>
+<body>
+    <img src="/fontbolt-removebg-preview.png" alt="" style="width: 150px;  position: absolute; top: 20px; left: 20px;">
+    <div class="container">
+        <img src="/fontbolt__1_-removebg-preview.png"  id="wel">
+        
+        <p> Enter Your Details to Begin Your Journey</p>
+        
+        <div class="section small-inputs">
+            <div class="input-group">
+                <label for="weightInput">Weight (kg)</label>
+                <input type="number" id="weightInput" placeholder="e.g. 70" />
+            </div>
+            <div class="input-group">
+                <label for="heightInput">Height (cm)</label>
+                <input type="number" id="heightInput" placeholder="e.g. 170" />
+            </div>
+        </div>
+        
+        <div class="section gender-options">
+            <label style="margin-bottom: 10px;">Gender</label>
+            <input type="radio" id="maleId" name="gender" value="male" class="mr-2">
+            <label for="male" class="mr-4 text-gray-700">Male</label>
+            
+            <input type="radio" id="femaleId" name="gender" value="female" class="mr-2">
+            <label for="female" class="text-gray-700">Female</label>
+        </label>
+    </div>
+    
+    <div class="section">
+        <label style="margin-bottom: 10px;">What is your goal?</label>
+        <div class="goal-options">
+            <label class="goal-card">
+                <input type="radio" name="goal" value="bulk" id="bulkId" />
+                <img src="OIP-removebg-preview (1).png" alt="Bulk" />
+                <span>Bulk</span>
+            </label>
+            
+            <label class="goal-card">
+                <input type="radio" name="goal" value="cut" id="cutId"/>
+                <img src="OIP-removebg-preview (2).png" alt="Cut" />
+                <span>Cut</span>
+            </label>
+            
+            <label class="goal-card">
+                <input type="radio" name="goal" value="maintain" id="maintainId" />
+                <img src="image-removebg-preview.png" alt="Maintain" />
+                <span>Recomposition</span>
+            </label>
+        </div>
+        
+        <label for="dietPreference">Diet Type</label>
+        <select id="dietPreference">
+            <option value="vegetarian">Vegetarian</option>
+            <option value="non-vegetarian">Non-Vegetarian</option>
+        </select>
+    </div>
+    
+    
+          
+    <div class="section">
+        <h3 style="color:white; text-align:center;">Get Meal Suggestions</h3>
+        <button onclick="getRecipes()">Fetch Recipes</button>
+        <ul id="recipeList"></ul>
+    </div>
+    <audio autoplay loop>
+        <source src="Solo Leveling Episode 6 OST - The Real Hunt Begins _ _DARK ARIA ᐸLV2ᐳ_ (Piano) [Nur_v431HKY].mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+    
+</div>
+
+
+
+   
+    
+    <script>
+        
+    </script>
+</body>
+</html>

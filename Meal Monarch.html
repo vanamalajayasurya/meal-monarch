@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Meal Monarch</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="meal monarch.js">
+    </script>
+    <link rel="stylesheet" href="meal monarch .css">
+   
+</head>
+<body>
+
+    <img src="/fontbolt-removebg-preview.png" alt="" style="width: 150px;  position: absolute; top: 20px; left: 20px;">
+    <div class="container">
+        
+
+        <div id="loginPage" class="page active">
+            <img src="/fontbolt__2_-removebg-preview.png" alt="" style="width: 100px; margin-left: 120px;"  >
+            <input type="email" id="loginEmail" placeholder="Email">
+            <input type="password" id="loginPassword" placeholder="Password">
+            <div class="options" style="display: flex; justify-content: space-between; align-items: center; font-size: 11px;">
+                <label style="display: inline-flex; align-items: center; gap: 5px; color: white; ">
+                    <input type="checkbox">Remember</label>
+                
+                <a href="#" id="ForgotId"  style="text-decoration: none; color:white;">Forgot password ?</a>
+            </div>
+            <button id="loginBtn">Login</button>
+            <p>Don't have an account? <a href="#" id="RegisterId" onclick="showPage('registerPage')">Register</a></p>
+        </div>
+        
+        
+        <div id="registerPage" class="page">
+            <img src="/fontbolt__3_-removebg-preview.png" alt="" style="width: 125px; margin-left: 110px;"  >
+            <input type="text" id="registerName" placeholder="Name">
+            <input type="email" id="registerEmail" placeholder="Email">
+            <input type="password" id="registerPassword" placeholder="Password">
+            <input type="password" id="confirmPassword" placeholder="Confirm Password">
+            <input type="date" id="dob" placeholder="Date of Birth">
+            <input type="tel" id="mobile" placeholder="Enter mobile number" pattern="[0-9]{10}" maxlength="10">
+            <button id="registerBtn">Register</button>
+            <p>Already have an account? <a href="#" onclick="showPage('loginPage')">Login</a></p>
+        </div>
+           
+        <audio autoplay loop>
+            <source src="Solo Leveling Episode 6 OST - The Real Hunt Begins _ _DARK ARIA ᐸLV2ᐳ_ (Piano) [Nur_v431HKY].mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+          </audio>
+       
+
+        
+
+    </div>
+ 
+</body>
+</html>    
