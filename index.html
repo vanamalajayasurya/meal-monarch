@@ -24,10 +24,17 @@
                 <label style="display: inline-flex; align-items: center; gap: 5px; color: white; ">
                     <input type="checkbox">Remember</label>
                 
-                <a href="#" id="ForgotId"  style="text-decoration: none; color:white;">Forgot password ?</a>
+               <a href="#" id="forgotLink" onclick="showPage('forgotPasswordPage')" style="text-decoration: none; color: white;">Forgot password?</a>
             </div>
             <button id="loginBtn">Login</button>
             <p>Don't have an account? <a href="#" id="RegisterId" onclick="showPage('registerPage')">Register</a></p>
+        </div>
+                <div id="forgotPasswordPage" class="page">
+            <h2>Forgot Password</h2>
+            <p>Enter your email to receive password reset instructions:</p>
+            <input type="email" id="forgotEmail" placeholder="Email">
+            <button id="resetBtn">Reset Password</button>
+            <p><a href="#" onclick="showPage('loginPage')">Back to Login</a></p>
         </div>
         
         
