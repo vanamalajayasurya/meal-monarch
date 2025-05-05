@@ -12,6 +12,8 @@
 </head>
 <body>
     <img src="/fontbolt-removebg-preview.png" alt="" style="width: 150px;  position: absolute; top: 20px; left: 20px;">
+
+    <img src="/mutebtn.png"  alt=""  id="mutebtn">
     <div class="container">
         <img src="/fontbolt__1_-removebg-preview.png"  id="wel">
         
@@ -19,10 +21,12 @@
         
         <div class="section small-inputs">
             <div class="input-group">
+                <!-- take USER's WEIGHT -->
                 <label for="weightInput">Weight (kg)</label>
                 <input type="number" id="weightInput" placeholder="e.g. 70" />
             </div>
             <div class="input-group">
+                <!-- take USER's HEIGHT -->
                 <label for="heightInput">Height (cm)</label>
                 <input type="number" id="heightInput" placeholder="e.g. 170" />
             </div>
@@ -37,6 +41,7 @@
             <label for="female" class="text-gray-700">Female</label>
         </label>
     </div>
+    
     
     <div class="section">
         <label style="margin-bottom: 10px;">What is your goal?</label>
@@ -71,9 +76,11 @@
           
     <div class="section">
         <h3 style="color:white; text-align:center;">Get Meal Suggestions</h3>
-        <button onclick="getRecipes()">Fetch Recipes</button>
-        <ul id="recipeList"></ul>
+        <button id="fetchMealPlan">Fetch Recipes</button>
+        <div id="result" style="white-space: pre-wrap; margin-top: 20px;"></div>
+
     </div>
+
     <audio autoplay loop>
         <source src="Solo Leveling Episode 6 OST - The Real Hunt Begins _ _DARK ARIA ᐸLV2ᐳ_ (Piano) [Nur_v431HKY].mp3" type="audio/mpeg">
         Your browser does not support the audio element.

@@ -12,6 +12,14 @@ body {
     min-height: 100vh;
 }
 
+#mutebtn{
+    width: 50px; 
+    position: fixed;
+    top: 24px;
+    right: 20px;
+    cursor: pointer;
+}
+
 .container {
     background: rgba(255, 255, 255, 0.05);
     padding: 40px;
@@ -24,11 +32,10 @@ body {
     border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
-#wel {
+#wel{
     margin-bottom: 10px;
     width: 509px;
     margin-left: 51px;
-
 }
 
 .mr-2:hover,.mr-4:hover{

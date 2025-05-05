@@ -1,7 +1,6 @@
 
 $(document).on("click", "#loginBtn", function() {
     
-    
     $(".error").hide();
     
     var emailVal = $("#loginEmail").val();
