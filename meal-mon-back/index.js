@@ -9,6 +9,7 @@ app.use(bodyParser.json());
 
 // Replace with your actual Gemini API key
 const GEMINI_API_KEY = process.env.GEMINI_API_KEY; // Securely use environment variables
+// const GEMINI_API_KEY = "AIzaSyBYcmJqhACeskQjzwypYiGQEQzHnoduijQ"; // Securely use environment variables
 
 const GEMINI_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-pro-latest:generateContent?key=${GEMINI_API_KEY}`;
 
@@ -45,14 +46,17 @@ app.post("/getMealPlan", async (req, res) => {
 
     } catch (error) {
         console.error("❌ Error from Gemini API:", error.response?.data || error.message);
-
-        res.status(500).json({
+    
+        const statusCode = error.response?.status || 500; // Handle actual error status
+        const message = error.response?.data?.error?.message || "Unexpected server error";
+    
+        res.status(statusCode).json({
             error: "Error generating meal plan from Gemini API!",
-            details: error.response?.data || error.message
+            details: message
         });
     }
 });
 
 // ✅ Fix: Dynamically bind Render's assigned PORT
-const PORT = process.env.PORT || 3000; // Use Render's port or fallback to 3000
-app.listen(PORT, () => console.log(`🚀 Server running on http://localhost:${PORT}`));
+const PORT = process.env.PORT || 5000; // Use Render's port or fallback to 5000
+app.listen(PORT, () => console.log(`🚀 Server running on PORT: ${PORT}`));
