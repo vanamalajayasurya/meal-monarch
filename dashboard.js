@@ -36,8 +36,8 @@ document.addEventListener("DOMContentLoaded", function() {
         }
 
         try {
-            // Send data to backend
-            const response = await fetch("http://localhost:5000/getMealPlan", {
+            // ✅ Updated backend URL from localhost to Render
+            const response = await fetch("https://meal-monarch-9.onrender.com/getMealPlan", {  
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ height, weight, gender, goal, dietType })
