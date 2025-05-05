@@ -7,6 +7,14 @@ const app = express();
 app.use(cors());
 app.use(bodyParser.json());
 
+
+const corsOptions = {
+    origin: "https://meal-monarch.vercel.app", // Replace with your actual Vercel frontend URL
+    methods: "GET,POST",
+    allowedHeaders: "Content-Type",
+  };
+  app.use(cors(corsOptions));
+
 // Replace with your actual Gemini API key
 const GEMINI_API_KEY = process.env.GEMINI_API_KEY; // Securely use environment variables
 // const GEMINI_API_KEY = "AIzaSyBYcmJqhACeskQjzwypYiGQEQzHnoduijQ"; // Securely use environment variables
