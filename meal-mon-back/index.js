@@ -8,9 +8,10 @@ app.use(cors());
 app.use(bodyParser.json());
 
 // Replace with your actual Gemini API key
-const GEMINI_API_KEY = "AIzaSyD6OhDXhEyVBL__7KHB0lUv5N0-rWC07b4"; // <-- Make sure this is correct
+const GEMINI_API_KEY = process.env.GEMINI_API_KEY; // Securely use environment variables
 
 const GEMINI_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-pro-latest:generateContent?key=${GEMINI_API_KEY}`;
+
 app.post("/getMealPlan", async (req, res) => {
     const { height, weight, gender, goal, dietType } = req.body;
 
@@ -25,8 +26,9 @@ app.post("/getMealPlan", async (req, res) => {
     const prompt = `Generate a personalized and detailed meal plan for a ${gender} whose height is ${height} cm and weight is ${weight} kg.
     Goal: ${goal}
     Diet Preference: ${dietType}
-    Include meal timings, portion sizes, and nutritional breakdowns.Also include table of contents with meal names and timings.
+    Include meal timings, portion sizes, and nutritional breakdowns. Also include a table of contents with meal names and timings.
     Make sure to include a variety of foods and ensure the plan is balanced and healthy.`;
+
     console.log("📝 Prompt for Gemini API:", prompt);
 
     try {
@@ -51,5 +53,6 @@ app.post("/getMealPlan", async (req, res) => {
     }
 });
 
-const PORT = 5000;
+// ✅ Fix: Dynamically bind Render's assigned PORT
+const PORT = process.env.PORT || 3000; // Use Render's port or fallback to 3000
 app.listen(PORT, () => console.log(`🚀 Server running on http://localhost:${PORT}`));
