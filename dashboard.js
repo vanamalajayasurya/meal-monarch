@@ -35,6 +35,8 @@ document.addEventListener("DOMContentLoaded", function() {
             return;
         }
 
+        document.getElementById("loading").style.display = "block";
+
         try {
             // ✅ Updated backend URL from localhost to Render
             const response = await fetch("https://meal-monarch-9.onrender.com/getMealPlan", {  
