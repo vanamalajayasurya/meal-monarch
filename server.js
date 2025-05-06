@@ -1,5 +1,5 @@
-
 $(document).on("click", "#loginBtn", function() {
+    
     
     $(".error").hide();
     
@@ -31,7 +31,7 @@ $(document).on("click", "#registerBtn", function() {
     var passVal = $("#registerPassword").val();
     var isValid = true;
     
-    if (nameVal.trim() == "") {
+    if (nameVal.trim() === "") {
         isValid = false;
         console.log("Name cannot be empty");
         alert("Error: Name cannot be empty!");
@@ -57,6 +57,7 @@ $(document).on("click", "#registerBtn", function() {
         console.log("Registration failed due to validation errors.");
         
     }
+    
 });
 function showPage(pageId) {
     $('.page').removeClass('active');
