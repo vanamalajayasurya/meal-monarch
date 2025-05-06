@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Dashboard - Smart Diet Planner</title>
+    <title>Dashboard - Smart Diet Planner</title>   
     <link rel="stylesheet" href="dashbord.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="dashboard.js"></script>
@@ -80,6 +80,12 @@
         <div id="result" style="white-space: pre-wrap; margin-top: 20px;"></div>
 
     </div>
+
+    <div id="loading" style="display: none; position: fixed; top: 40%; left: 45%;" >
+    <img src="/loading-buffer.gif" alt="Loading..." width="60" />
+    <p style="color:rgb(23, 248, 221);position: fixed; top: 45%; left: 36%;text-align: center;">Fetching your meal plan...</p>
+
+</div>
 
     <audio autoplay loop>
         <source src="Solo Leveling Episode 6 OST - The Real Hunt Begins _ _DARK ARIA ᐸLV2ᐳ_ (Piano) [Nur_v431HKY].mp3" type="audio/mpeg">
