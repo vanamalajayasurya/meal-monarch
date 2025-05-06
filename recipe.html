@@ -30,7 +30,7 @@
         }
 
         .logo {
-            position: fixed;
+            position: absolute;
             top: 20px;
             left: 20px;
             z-index: 1000;
@@ -39,6 +39,16 @@
         .logo img{
             width: 150px;
             height: auto;
+        }
+
+        #mutebtn{
+            width: 50px; 
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            cursor: pointer;
+            z-index: 1000;
+
         }
 
        .heading{
@@ -54,13 +64,7 @@
             height: auto;
         }
 
-        #mutebtn{
-            width: 50px; 
-            position: fixed;
-            top: 24px;
-            right: 20px;
-            cursor: pointer;
-        }
+       
 
         /* #mealPlanContainer {
             max-width: 600px;
@@ -118,6 +122,30 @@
         button:hover { 
             background: #0056b3;
         
+        }
+
+
+        @media screen and (max-width: 430px) {
+            .logo{
+                width: 180px;
+                margin-top: 20px;
+            }
+
+
+            #mealPlanContainer{
+                margin-top: 40px;
+                width: 76%;
+
+            }
+
+            .heading{
+                margin-top: 100px;
+                width: 380px;
+                height: 50px;
+
+            }
+
+            
         }
 
         
