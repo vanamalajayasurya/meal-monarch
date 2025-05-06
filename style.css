@@ -125,7 +125,8 @@ h2 {
   
   .wrapper .icon {
     position: relative;
-    background: #fff;
+    background:rgba(255, 255, 255, 0.1);
+    color: white;
     border-radius: 50%;
     margin: 10px;
     width: 50px;
