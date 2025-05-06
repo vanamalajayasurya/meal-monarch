@@ -10,15 +10,12 @@ $(document).on("click", "#loginBtn", function() {
     if (passVal.length < 4) {
         isValid = false;
         console.log("Password too short"); 
-        alert("Error: Password cannot be empty!");
-
     }
     
     var emailPattern = /^[a-zA-Z0-9._]+@[a-zA-Z0-9]+\.[a-zA-Z]{2,}$/;
     if (!emailPattern.test(emailVal)) {
         isValid = false;
         console.log("Invalid email format"); 
-        alert("Error: Invalid email format!");
     }
     
     if (isValid) {
@@ -45,8 +42,6 @@ $(document).on("click", "#registerBtn", function() {
     if (!emailPattern.test(emailVal)) {
         isValid = false;
         console.log("Invalid email format for registration");
-        alert("Error: Invalid email format!");
-
     }
     
     if (passVal.length < 4) {
@@ -64,10 +59,6 @@ $(document).on("click", "#registerBtn", function() {
     }
 });
 function showPage(pageId) {
-    $('.page').removeClass('active');
-    $('#' + pageId).addClass('active');
-}
-
     $('.page').removeClass('active');
     $('#' + pageId).addClass('active');
 }
