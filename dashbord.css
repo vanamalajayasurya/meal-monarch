@@ -106,7 +106,7 @@ button {
     background-color: #007BFF;
     color: white;
     border: none;
-    border-radius: 30px;
+    border-radius: 9px;
     cursor: pointer;
     transition: all 0.3s ease;
     display: block;
