@@ -1,3 +1,10 @@
+*{
+    
+    overflow-x: hidden;
+
+}
+
+
 body {
     font-family: 'Segoe UI', sans-serif;
     background-image: url(/1347881.jpeg);
@@ -15,9 +22,10 @@ body {
 #mutebtn{
     width: 50px; 
     position: fixed;
-    top: 24px;
+    top: 20px;
     right: 20px;
     cursor: pointer;
+    z-index: 100;
 }
 
 .container {
@@ -215,6 +223,95 @@ position: absolute;
 left: -9999px;
 }
 
+/* Responsive behaviour */
+/* Let's make it available for our phones */
+
+@media screen and (max-width:430px) {
+
+    #logo{
+        margin-bottom: 40px;
+        top: 15px;
+        width: 265px; 
+
+    }
+
+    #mutebtn{
+    width: 35px; 
+    top: 13px;
 
 
 
+    }
+
+    .container{
+        margin-top: 70px;
+        padding: 50px 0px;
+        width: 95%;
+    }
+
+    #wel{
+        width: 350px;
+        margin: 20px 15px;
+    }
+
+    .small-inputs {
+        margin: 25px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .gender-options {    
+       /* margin:;  */
+       display: flex;
+       padding:0px 20px;
+        width: 200%;
+    }
+    #maleId,#femaleId{
+        width: 20px;
+    }
+
+    #label1{
+        text-align: center;
+        font-size: 20px;
+    }
+    #label2{
+        text-align: center;
+        font-size: 20px;
+    }
+
+    .goal-options{
+        
+        flex-direction: column;
+        margin: 20px;
+
+    }
+
+    select{
+        width: 360px;
+        margin: auto 24px;
+
+    }
+
+    option{
+        cursor: pointer;
+        width: 160px;
+        max-width: 160px;
+    }
+
+    #loading img{
+        position: fixed;
+        left: 40%;
+        width: 90px;
+        top: 55%;
+
+
+    }
+    #loading #fetchDet{
+       display: none;
+    }
+
+
+    
+
+}

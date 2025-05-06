@@ -11,7 +11,8 @@
     
 </head>
 <body>
-    <img src="/fontbolt-removebg-preview.png" alt="" style="width: 150px;  position: absolute; top: 20px; left: 20px;">
+    
+    <img id="logo" src="/fontbolt-removebg-preview.png" alt="" style=" z-index: 100;width: 150px;  position: fixed; top: 20px; left: 20px;">
 
     <img src="/mutebtn.png"  alt=""  id="mutebtn">
     <div class="container">
@@ -33,7 +34,7 @@
         </div>
         
         <div class="section gender-options">
-            <label style="margin-bottom: 10px;">Gender</label>
+            <label >Gender</label>
             <input type="radio" id="maleId" name="gender" value="male" class="mr-2">
             <label for="male" class="mr-4 text-gray-700">Male</label>
             
@@ -44,7 +45,7 @@
     
     
     <div class="section">
-        <label style="margin-bottom: 10px;">What is your goal?</label>
+        <label id="label1" style="margin-bottom: 10px;">What is your goal?</label>
         <div class="goal-options">
             <label class="goal-card">
                 <input type="radio" name="goal" value="bulk" id="bulkId" />
@@ -65,10 +66,10 @@
             </label>
         </div>
         
-        <label for="dietPreference">Diet Type</label>
+        <label id="label2" for="dietPreference">Diet Type</label>
         <select id="dietPreference">
-            <option value="vegetarian">Vegetarian</option>
-            <option value="non-vegetarian">Non-Vegetarian</option>
+            <option class="Options" value="vegetarian">Vegetarian</option>
+            <option class="Options" value="non-vegetarian">Non-Vegetarian</option>
         </select>
     </div>
     
@@ -83,7 +84,7 @@
 
     <div id="loading" style="display: none; position: fixed; top: 40%; left: 45%;" >
     <img src="/loading-buffer.gif" alt="Loading..." width="60" />
-    <p style="color:rgb(23, 248, 221);position: fixed; top: 45%; left: 36%;text-align: center;">Fetching your meal plan...</p>
+    <p id="fetchDet" style="color:rgb(23, 248, 221);position: fixed; top: 45%; left: 36%;text-align: center;">Fetching your meal plan...</p>
 
 </div>
 
