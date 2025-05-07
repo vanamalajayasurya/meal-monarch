@@ -19,7 +19,8 @@ const corsOptions = {
 const GEMINI_API_KEY = process.env.GEMINI_API_KEY; // Securely use environment variables
 // const GEMINI_API_KEY = "AIzaSyBYcmJqhACeskQjzwypYiGQEQzHnoduijQ"; // Securely use environment variables
 
-const GEMINI_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-pro-latest:generateContent?key=${GEMINI_API_KEY}`;
+// const GEMINI_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-pro-latest:generateContent?key=${GEMINI_API_KEY}`;
+const GEMINI_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-latest:generateContent?key=${GEMINI_API_KEY}`;
 
 app.post("/getMealPlan", async (req, res) => {
     const { height, weight, gender, goal, dietType } = req.body;
